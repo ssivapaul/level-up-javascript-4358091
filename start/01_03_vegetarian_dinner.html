@@ -13,7 +13,7 @@
 
   <!-- Use this element to render your menu -->
   <ul id="menu"></ul>
-
+  <p id="demo"></p>
   <script>
     const menu = [
       {
@@ -34,6 +34,16 @@
       }
     ]
     // Write your code here
+    function vegetarianMenu(menu) {
+      const menuNode = document.querySelector('#menu');
+      const vegetarianOption = menu.filter(option => option.isVegetarian === true);
+      vegetarianOption.forEach(option =>  {
+        let dish = document.createElement("li");
+        dish.textContent = option.name;
+        menuNode.appendChild(dish);
+      })
+    }
+    vegitarianMenu(menu);
 
   </script>
 </body>
