@@ -31,3 +31,19 @@ class Book {
 }
 
 // Write your code here
+class TechnicalBook extends Book {
+  constructor(title, author, ISBN, numCopies, edition) {
+    super(title, author, ISBN, numCopies);
+    this.edition = edition;
+  }
+
+  getEdition() {
+    return `The current version of this book is ${this.edition}`;
+  }
+  //get edtion() {
+  //  return this.getEdition();
+  //}  
+}
+const crack = new TechnicalBook("Crack", "Gayle Laackmann McDowell", 1209123, 7, "2.3");
+console.log(crack.availability);
+console.log(crack.getEdition());
