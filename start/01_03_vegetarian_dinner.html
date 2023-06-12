@@ -39,11 +39,13 @@
       const vegetarianOption = menu.filter(option => option.isVegetarian === true);
       vegetarianOption.forEach(option =>  {
         let dish = document.createElement("li");
-        dish.textContent = option.name;
+        let font = document.createElement("h1");
+        font.textContent = option.name;
         menuNode.appendChild(dish);
-      })
+        dish.appendChild(font);
+      });
     }
-    vegitarianMenu(menu);
+    vegetarianMenu(menu);
 
   </script>
 </body>
