@@ -16,7 +16,21 @@
 
   <script>
     // Write your code here
-    
+    //get Current time
+    function curTime() {
+      let time = new Date();
+      return time.toLocaleTimeString();
+    }
+    function displayClock() {
+        document.getElementById("clock").innerHTML = curTime();
+      }
+    function clock() {
+      //document.getElementById("clock").innerHTML = curTime();
+      //call clock() function after 1 sec
+      //setTimeout(function() { clock();}, 1000);      
+      return setInterval(function() { displayClock()}, 1000);
+    }
+    clock();
   </script>
 </body>
 
