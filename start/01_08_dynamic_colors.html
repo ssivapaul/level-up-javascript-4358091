@@ -18,7 +18,16 @@
 
   <script>
     // Write your code here
+    document.getElementById("blue").addEventListener("click", changeColor("blue")); // "#0f62f3"
+    document.getElementById("pink").addEventListener("click", changeColor("pink")); // "#ff7eb6"
+    document.getElementById("green").addEventListener("click", changeColor("green")); // "#42be65"
 
+    
+    function changeColor(color) {
+      return () => {
+        document.body.style.backgroundColor = color;        
+      }      
+    }
   </script>
 </body>
 
