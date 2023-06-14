@@ -13,14 +13,28 @@
 
   <!-- Use this element to generate your menu -->
   <ul id="combined-menu"></ul>
-<ul>
+<!-- <ul>
   <li><a href=""></a></li>
   <li><a href=""></a></li>
   <li><a href=""></a></li>
-</ul>
+</ul> -->
   <script>
     // Write your code here
+    function foodTruck(menus) {
+      let flatMenu = menus.flat();
+      let combinedMenu = new Set();
+      flatMenu.forEach(element => combinedMenu.add(element) );
 
+      
+      const menuNode = document.querySelector("#combined-menu");
+      for(let item of combinedMenu) {
+        let foodNode = document.createElement('li');
+        foodNode.innerText = item;
+        menuNode.appendChild(foodNode);
+      }
+    }
+
+    foodTruck([["Tacos", "Burgers"], ["Pizza"], ["Burgers", "Fries"]]);
   </script>
 </body>
 
